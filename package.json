@@ -1,0 +1,35 @@
+{
+  "name": "ir-blaster-api",
+  "version": "1.0.0",
+  "description": "TCP server that listens to lirc button commands",
+  "main": "lib/bootstrap.js",
+  "scripts": {
+    "run": "npm run compile && node lib/bootstrap.js",
+    "compile": "babel -d lib/ src/",
+    "compile_test": "babel -d test_cache/ test/",
+    "watch_compile": "babel --watch -d lib/ src/",
+    "watch_compile_test": "babel --watch -d test_cache/ test/",
+    "test": "mocha test_cache/**/*_test.js",
+    "watch_test": "mocha --watch test_cache/**/*_test.js"
+  },
+  "author": "Myles Eftos <myles@madpilot.com.au> (http://myles.eftos.id.au)",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "lircd-conf-parser": "0.0.4",
+    "lirc_node": "0.0.4",
+    "yargs": "^3.32.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chalk": "^1.1.1",
+    "mocha": "^2.3.4",
+    "mockery": "^1.4.0",
+    "sinon": "^1.17.2",
+    "source-map-support": "^0.4.0"
+  }
+}

@@ -1,0 +1,7 @@
+scripts
+settings
+npm_debug.log
+node_modules
+lib/**/*
+test_cache/**/*
+*.sw?
